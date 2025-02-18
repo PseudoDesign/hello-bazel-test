@@ -1,6 +1,6 @@
-# Hello Bazel Test
+# Hello Bazel Test Lib
 
-This is a simple example of setting up a bazel project using Dockerized builds, APIs, and automated tests.
+This is a simple example of setting up a bazel project using Dockerized builds, APIs, and automated unit tests.
 
 ## Dockerized Builds
 
@@ -20,3 +20,18 @@ Test it with
 
 Since this isn't a Docker tutorial, we'll save the nitty-gritty for another time.
 
+## Project Structure
+
+### `app` directory
+
+This directory contains any standalone applications associated with this build, such as the "hello-world" application entry point.
+
+### `lib` directory
+
+This directory contains libraries that can be used by other projects.  In "framework" style projects, the library is the key deliverable of this repository, intended to be used in a larger project.
+
+### `test` directory
+
+This directory contains unit tests (and only unit tests), which are expected to be run on the developer's host machine (or CI platform).
+
+Unit tests are meant to validate the expected behavior of the source code, not that the code functions as expected on the hardware platform.
