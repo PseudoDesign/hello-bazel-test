@@ -22,11 +22,15 @@ Since this isn't a Docker tutorial, we'll save the nitty-gritty for another time
 
 ## Project Structure
 
+### `api` directory
+
+Generates [protobuf]() libraries, and (soon) builds for running protobuf as a service.
+
 ### `app` directory
 
 This directory contains any standalone applications associated with this build, such as the "hello-world" application entry point.
 
-### `lib` directory
+### `cc-lib` directory
 
 This directory contains libraries that can be used by other projects.  In "framework" style projects, the library is the key deliverable of this repository, intended to be used in a larger project.
 

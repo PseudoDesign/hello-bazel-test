@@ -1,0 +1,10 @@
+/* Provide a messaging API representing the "greeting" library */
+
+syntax = "proto3";
+
+package greeting;
+
+message GetGreet {
+    /* API for the "get_greet" function */
+    optional string name = 1;  // The default name is implicitly ""
+}
