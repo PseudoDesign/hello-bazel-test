@@ -1,5 +1,4 @@
-#include "lib/hello-time.h"
-#include "hello-greet.h"
+#include "lib/greeting.h"
 #include <iostream>
 #include <string>
 
@@ -9,6 +8,5 @@ int main(int argc, char** argv) {
     who = argv[1];
   }
   std::cout << get_greet(who) << std::endl;
-  print_localtime();
   return 0;
 }

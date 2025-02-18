@@ -1,0 +1,2 @@
+# Add support for google test to this project.
+bazel_dep(name = "googletest", version = "1.16.0")

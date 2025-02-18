@@ -1,6 +1,6 @@
 cc_library(
-    name = "hello-time",
-    srcs = ["hello-time.cc"],
-    hdrs = ["hello-time.h"],
+    name = "greeting",
+    srcs = ["greeting.cc"],
+    hdrs = ["greeting.h"],
     visibility = ["//app:__pkg__"],
 )
