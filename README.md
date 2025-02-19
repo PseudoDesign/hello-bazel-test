@@ -30,11 +30,11 @@ Generates [protobuf]() libraries, and (soon) builds for running protobuf as a se
 
 This directory contains any standalone applications associated with this build, such as the "hello-world" application entry point.
 
-#### hello-world
+#### `hello-world`
 
 Builds a simple "hello-world" binary using the "greeting" lib.
 
-#### api-(client/server)
+#### `api-(client/server)`
 
 An automated util demonstrating sending Protobuf messages over the ZMQ link.
 
@@ -47,3 +47,4 @@ This directory contains libraries that can be used by other projects.  In framew
 This directory contains unit tests (and only unit tests), which are expected to be run on the developer's host machine (or CI platform).
 
 Unit tests are meant to validate the expected behavior of the source code, not that the code functions as expected on the hardware platform.
+

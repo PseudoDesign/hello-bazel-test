@@ -8,3 +8,8 @@ message GetGreet {
     /* API for the "get_greet" function */
     optional string name = 1;  // The default name is implicitly ""
 }
+
+message GetGreetResponse {
+    /* API for the response to the "get_greet" function */
+    string greeting = 1;
+}

@@ -3,6 +3,8 @@
 #include <thread>
 #include <iostream>
 #include "zmq.hpp"
+#include "api/greeting.pb.h"
+#include "lib/greeting.h"
 
 int main() 
 {
@@ -17,8 +19,6 @@ int main()
     zmq::socket_t socket{context, zmq::socket_type::rep};
     socket.bind("tcp://*:5555");
 
-    // prepare some static data for responses
-    const std::string data{"World"};
 
     for (;;) 
     {
@@ -28,11 +28,28 @@ int main()
         socket.recv(request, zmq::recv_flags::none);
         std::cout << "Received " << request.to_string() << std::endl;
 
+        // Decode the GetGreet request
+        greeting::GetGreet parsed_greeting;
+        parsed_greeting.ParseFromString(request.to_string());
+
+        // Create the GetGreetResponse from the API call
+        greeting::GetGreetResponse response;
+        std::string greeting_reply = get_greet(parsed_greeting.name());
+        std::cout << "Request name: " << parsed_greeting.name() << std::endl;
+        std::cout << "Greeting Response: " << greeting_reply << std::endl;
+        response.set_response(greeting_reply);
+        
+        // Serialize the response
+        std::string serialized_response;
+        response.SerializeToString(&serialized_response);
+
+        std::cout << "Sending response " << serialized_response << std::endl;
+
         // simulate work
         std::this_thread::sleep_for(1s);
 
         // send the reply to the client
-        socket.send(zmq::buffer(data), zmq::send_flags::none);
+        socket.send(zmq::buffer(serialized_response), zmq::send_flags::none);
     }
 
     return 0;
