@@ -16,3 +16,14 @@ cc_binary(
     ],
     linkopts = ["-lpthread"]
 )
+
+cc_binary(
+    name = "api-client",
+    srcs = ["api-client.cc"],
+    deps = [
+        "@libzmq//:libzmq",
+        "@cppzmq//:cppzmq",
+        "//lib:greeting",
+    ],
+    linkopts = ["-lpthread"]
+)
