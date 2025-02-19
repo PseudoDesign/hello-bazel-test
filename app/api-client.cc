@@ -32,7 +32,11 @@ int main()
         zmq::message_t reply{};
         socket.recv(reply, zmq::recv_flags::none);
 
-        std::cout << "Received " << reply.to_string(); 
+        // Deserialize the response
+        greeting::GetGreetResponse response;
+        response.ParseFromString(reply.to_string());
+
+        std::cout << "Received " << response.greeting(); 
         std::cout << " (" << request_num << ")";
         std::cout << std::endl;
     }

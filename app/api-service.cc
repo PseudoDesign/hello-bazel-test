@@ -37,7 +37,7 @@ int main()
         std::string greeting_reply = get_greet(parsed_greeting.name());
         std::cout << "Request name: " << parsed_greeting.name() << std::endl;
         std::cout << "Greeting Response: " << greeting_reply << std::endl;
-        response.set_response(greeting_reply);
+        response.set_greeting(greeting_reply);
         
         // Serialize the response
         std::string serialized_response;
