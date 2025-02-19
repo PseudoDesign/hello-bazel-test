@@ -30,9 +30,17 @@ Generates [protobuf]() libraries, and (soon) builds for running protobuf as a se
 
 This directory contains any standalone applications associated with this build, such as the "hello-world" application entry point.
 
-### `cc-lib` directory
+#### hello-world
 
-This directory contains libraries that can be used by other projects.  In "framework" style projects, the library is the key deliverable of this repository, intended to be used in a larger project.
+Builds a simple "hello-world" binary using the "greeting" lib.
+
+#### api-(client/server)
+
+An automated util demonstrating sending Protobuf messages over the ZMQ link.
+
+### `lib` directory
+
+This directory contains libraries that can be used by other projects.  In framework style projects, the library is the key deliverable of this repository, intended to be used in a larger project.
 
 ### `test` directory
 

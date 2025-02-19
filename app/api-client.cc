@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "zmq.hpp"
+#include "api/greeting.h"
 
 int main()
 {
