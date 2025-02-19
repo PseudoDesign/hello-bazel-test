@@ -26,4 +26,5 @@ py_test(
     deps = [
         "//proto:greeting_py_pb2",
     ],
+    size = "small",
 )
