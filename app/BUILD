@@ -14,4 +14,5 @@ cc_binary(
         "@cppzmq//:cppzmq",
         "//lib:greeting",
     ],
+    linkopts = ["-lpthread"]
 )

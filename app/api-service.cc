@@ -8,6 +8,8 @@ int main()
 {
     using namespace std::chrono_literals;
 
+    std::cout << "Started" << std::endl;
+
     // initialize the zmq context with a single IO thread
     zmq::context_t context{1};
 
