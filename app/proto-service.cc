@@ -46,7 +46,7 @@ int main()
         std::cout << "Sending response " << serialized_response << std::endl;
 
         // simulate work
-        std::this_thread::sleep_for(1s);
+        std::this_thread::sleep_for(.05s);
 
         // send the reply to the client
         socket.send(zmq::buffer(serialized_response), zmq::send_flags::none);
