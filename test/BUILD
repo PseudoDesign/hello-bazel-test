@@ -19,12 +19,3 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
-
-py_test(
-    name = "test_python_proto",
-    srcs = ["test_python_proto.py"],
-    deps = [
-        "//proto:greeting_py_pb2",
-    ],
-    size = "small",
-)

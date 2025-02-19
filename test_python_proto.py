@@ -1,7 +1,8 @@
 import sys
 import unittest
 
-from proto import greeting_pb2
+import greeting_pb2
+
 
 
 class TestCase(unittest.TestCase):
@@ -24,6 +25,9 @@ class TestCase(unittest.TestCase):
         decoded_response = greeting_pb2.GetGreetResponse()
         decoded_response.ParseFromString(serialized)
         self.assertEqual("Hello Adam", decoded_response.greeting)
+
+    def test_get_from_api_service(self):
+        pass
 
 
 if __name__ == "__main__":

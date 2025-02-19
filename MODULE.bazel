@@ -6,3 +6,4 @@ bazel_dep(name = "cppzmq", version = "4.10.0")
 bazel_dep(name = "libzmq", version = "4.3.5.bcr.1")
 
 bazel_dep(name = "protobuf", version = "29.3")
+
