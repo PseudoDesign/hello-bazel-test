@@ -1,2 +1,7 @@
 # Add support for google test to this project.
 bazel_dep(name = "googletest", version = "1.16.0")
+
+# Add support for cppzmq
+bazel_dep(name = "cppzmq", version = "4.10.0")
+bazel_dep(name = "libzmq", version = "4.3.5.bcr.1")
+

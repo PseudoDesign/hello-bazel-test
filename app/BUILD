@@ -5,3 +5,13 @@ cc_binary(
         "//lib:greeting",
     ],
 )
+
+cc_binary(
+    name = "api-service",
+    srcs = ["api-service.cc"],
+    deps = [
+        "@libzmq//:libzmq",
+        "@cppzmq//:cppzmq",
+        "//lib:greeting",
+    ],
+)
