@@ -7,10 +7,10 @@ cc_binary(
 )
 
 cc_binary(
-    name = "api-service",
-    srcs = ["api-service.cc"],
+    name = "proto-service",
+    srcs = ["proto-service.cc"],
     deps = [
-        "//api:greeting_lib",
+        "//proto:greeting_lib",
         "@libzmq//:libzmq",
         "@cppzmq//:cppzmq",
         "//lib:greeting",
@@ -19,10 +19,10 @@ cc_binary(
 )
 
 cc_binary(
-    name = "api-client",
-    srcs = ["api-client.cc"],
+    name = "proto-client",
+    srcs = ["proto-client.cc"],
     deps = [
-        "//api:greeting_lib",
+        "//proto:greeting_lib",
         "@libzmq//:libzmq",
         "@cppzmq//:cppzmq",
         "//lib:greeting",

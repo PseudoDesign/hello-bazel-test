@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "api/greeting.pb.h"
+#include "proto/greeting.pb.h"
 
 TEST(ApiGetGreet, EncodeAndDecode) {
     greeting::GetGreet my_greeting, parsed_greeting;

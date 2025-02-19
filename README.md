@@ -22,7 +22,7 @@ Since this isn't a Docker tutorial, we'll save the nitty-gritty for another time
 
 ## Project Structure
 
-### `api` directory
+### `proto` directory
 
 Generates [protobuf]() libraries, and (soon) builds for running protobuf as a service.
 
@@ -34,7 +34,7 @@ This directory contains any standalone applications associated with this build, 
 
 Builds a simple "hello-world" binary using the "greeting" lib.
 
-#### `api-(client/server)`
+#### `proto-(client/server)`
 
 An automated util demonstrating sending Protobuf messages over the ZMQ link.
 

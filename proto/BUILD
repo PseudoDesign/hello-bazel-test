@@ -12,7 +12,7 @@ package(default_visibility = [
 
 # greeting_py_pb - Python protobuf wrapper
 py_proto_library(
-    name = "greeting_py_pb",
+    name = "greeting_py_pb2",
     deps = [":greeting_proto"],
 )
 

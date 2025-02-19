@@ -10,12 +10,20 @@ cc_test(
 )
 
 cc_test(
-    name = "test_api_greeting",
+    name = "test_proto_greeting",
     size = "small",
-    srcs = ["test_api_greeting.cc"],
+    srcs = ["test_proto_greeting.cc"],
     deps = [
-        "//api:greeting_lib",
+        "//proto:greeting_lib",
         "@googletest//:gtest",
         "@googletest//:gtest_main",
+    ],
+)
+
+py_test(
+    name = "test_python_proto",
+    srcs = ["test_python_proto.py"],
+    deps = [
+        "//proto:greeting_py_pb2",
     ],
 )

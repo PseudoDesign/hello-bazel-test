@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "zmq.hpp"
-#include "api/greeting.pb.h"
+#include "proto/greeting.pb.h"
 
 int main()
 {
